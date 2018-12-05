@@ -1,0 +1,21 @@
+{
+  "name": "ng-sortable-table",
+  "description": "Angular1.x 表格排序模块",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitee.com/hungtcs/ng-sortable-table.git",
+  "author": "鸿则 <hungtcs@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp default"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.41",
+    "@babel/preset-env": "^7.0.0-beta.41",
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

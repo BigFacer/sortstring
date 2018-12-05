@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+table[sortable-table] th[sortable-column] {
+  cursor: pointer;
+  user-select: none;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: right;
+  background-image: url(../resources/images/sortable.both.png);
+}
+
+table[sortable-table] th[sortable-column].sortable-asc {
+  background-image: url(../resources/images/sortable.asc.png);
+}
+
+table[sortable-table] th[sortable-column].sortable-desc {
+  background-image: url(../resources/images/sortable.desc.png);
+}

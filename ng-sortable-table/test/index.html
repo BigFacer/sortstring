@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="../dist/css/ng-sortable-table.css" />
+  <style media="screen">
+    table {
+      width: 520px;
+    }
+    table th,
+    table td {
+      text-align: center;
+      border: 1px solid #CCC;
+    }
+  </style>
+  <title>Sortable Table Test</title>
+</head>
+<body>
+  <main id="main" ng-controller="AppController">
+    <table sortable-table on-sort="onSort($attrName, $sortType, $event);" sort-list="list">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th sortable-column="name">姓名</th>
+          <th sortable-column="age">年龄</th>
+          <th sortable-column="str">单号</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="item in list">
+          <td ng-bind="$index+1"></td>
+          <td ng-bind="item.name"></td>
+          <td ng-bind="item.age"></td>
+          <td ng-bind="item.str"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <script src="../lib/jquery/jquery-3.3.1.min.js" charset="utf-8" type="text/javascript"></script>
+  <!--<script src="../lib/angular/angular.js" charset="utf-8" type="text/javascript"></script>-->
+  <script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+  <script src="../dist/js/ng-sortable-table.module.js" charset="utf-8" type="text/javascript"></script>
+  <script type="text/javascript">
+    (function() {
+      angular.module('app.module', ['sortable-table.module']).controller('AppController', [
+        '$scope',
+        function($scope) {
+          $scope.list = [
+            {
+              name: '小A',
+              age: 12,
+              str:"A12BC"
+            },
+            {
+              name: '小B',
+              age: 13,
+              str:"A13BC"
+            },
+            {
+              name: '小C',
+              age: 14,
+                str:"A14BC"
+            },
+            {
+              name: '小D',
+              age: 15,
+                str:"A13BF"
+            },
+            {
+              name: '小E',
+              age: 16,
+                str:"A13SD"
+            },
+            {
+              name: '小F',
+              age: 17,
+                str:"A14SD"
+            },
+              {
+                  name: '小王',
+                  age: 17,
+                  str:"A14SD"
+              },
+              {
+                  name: '小徐',
+                  age: 90,
+                  str:"A14SD"
+              },
+              {
+                  name: '小安',
+                  age: 600,
+                  str:"A"
+              },
+              {
+                  name: '小泰',
+                  age: 120,
+                  str:"BASD"
+              },
+              {
+                  name: '小卞',
+                  age: 25,
+                  str:"basd"
+              },
+              {
+                  name: '小卞1',
+                  age: 9,
+                  str:"sdasda"
+              },
+              {
+                  name: '小卞123456',
+                  age: 10,
+                  str:"sdasdc"
+              },
+              {
+                  name: '小卞2',
+                  age: 60,
+                  str:"sdasdb"
+              }
+
+          ];
+//          $scope.onSort = function(attrName, sortType, event) {
+//            var list = $scope.list.sort(function(a, b) {
+//              if(typeof a[attrName] === 'string') {
+//                return a[attrName].localeCompare(b[attrName]);
+//              } else if (typeof a[attrName] === 'number') {
+//                return a[attrName] - b[attrName];
+//              }
+//            });
+//            if(sortType === 'desc') {
+//              list = list.reverse();
+//            }
+//            $scope.list = list;
+//          };
+        }
+      ]);
+      angular.bootstrap(document.querySelector('#main'), [
+        'app.module',
+      ]);
+    }());
+  </script>
+</body>
+</html>
+<!--function mySorter(a, b){-->
+<!--if (/^\d/.test(a) ^ /^\D/.test(b)) return a>b?1:(a==b?0:-1);-->
+<!--return a>b?-1:(a==b?0:1);-->
+<!--}-->
+
+<!--var pyArray=["a","d","fa","5","t","fw2","a31","b","e","2fs","4","0"]-->
+
+<!--alert(pyArray.sort(mySorter))-->
+
+

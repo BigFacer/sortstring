@@ -1,0 +1,23 @@
+{
+  "name": "ng-sortable-table",
+  "description": "Angular1.x 表格排序模块",
+  "main": "index.js",
+  "authors": [
+    "鸿则 <hungtcs@163.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://gitee.com/hungtcs/ng-sortable-table.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "private": false,
+  "dependencies": {
+    "angular": "angularjs#1.2",
+    "jquery": "1.9"
+  }
+}
